@@ -1,16 +1,16 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-
+import { compareNumbers } from '../utils.js';
 const test = QUnit.test;
 
 test('userGuess is too high', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = 8;
+    const expected = 1;
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = true;
+    const actual = compareNumbers(1, 2);
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -20,11 +20,11 @@ test('userGuess is too high', (expect) => {
 test('userGuess is too low', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
+    const expected = -1;
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = true;
+    const actual = compareNumbers(1, 0);
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -34,11 +34,11 @@ test('userGuess is too low', (expect) => {
 test('userGuess is right on', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
-    
     //Act 
+    const expected = 0;
+    
     // Call the function you're testing and set the result to a const
-    const actual = true;
+    const actual = compareNumbers(0, 0);
 
     //Expect
     // Make assertions about what is expected versus the actual result
