@@ -22,9 +22,9 @@ guessBtn.addEventListener('click', ()=> {
         reset.style.visibility = 'visible'; 
     }
     frog.textContent = `You have ${guessesRemaining} guesses left`;
-  });
+});
   
-  reset.addEventListener('click', ()=> {
+reset.addEventListener('click', ()=> {
     guessBtn.disabled = false;
     reset.style.visibility = 'hidden';
     guessesRemaining = 4;

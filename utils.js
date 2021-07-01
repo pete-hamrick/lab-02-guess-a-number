@@ -1,4 +1,4 @@
-export function compareNumbers(guessBtn, results, targetNumber, userGuessNum){
+export function compareNumbers(reset, guessBtn, results, targetNumber, userGuessNum){
     if (targetNumber > userGuessNum) {
         results.textContent = 'Your guess is too high';
 
