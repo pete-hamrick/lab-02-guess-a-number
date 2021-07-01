@@ -15,7 +15,7 @@ guessBtn.addEventListener('click', ()=> {
     console.log(targetNumber);
     const userGuessNum = Number(userGuess.value);
     guessesRemaining--;
-    compareNumbers(guessBtn, feedback, userGuessNum, targetNumber);
+    compareNumbers(reset, guessBtn, feedback, userGuessNum, targetNumber);
     if (guessesRemaining === 0 && userGuessNum !== targetNumber) {
         feedback.textContent = 'You are out of guesses! Game over.';
         guessBtn.disabled = true;
