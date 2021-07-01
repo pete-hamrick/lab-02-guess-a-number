@@ -1,21 +1,13 @@
-export function compareNumbers(targetNumber, userGuessNum){
-    let result;
-    // if guess is correct
-    if (targetNumber === userGuessNum) {
-        //      display YOU GOT IT
-        result.textContent = 'You Win! Game Over!';
-        //      disable game play
+export function compareNumbers(guessBtn, results, targetNumber, userGuessNum){
+    if (targetNumber > userGuessNum) {
+        results.textContent = 'Your guess is too high';
 
-        // else if guess is too high
-    } else if (targetNumber > userGuessNum) {
+    } else if (targetNumber < userGuessNum) {
+        results.textContent = 'Your guess is too low';
 
-        //      display your guess is too high
-        result.textContent = 'Your guess is too high';
-        // else if guess is too low
     } else {
-        result.textContent = 'Your guess is too low';
+        results.textContent = 'You Win! Game Over!';
+        guessBtn.disabled = true;
+        reset.style.visibility = 'visibility';
     }
-    //      display your guess is too low
-    //      
-    //          
-}
+}    
