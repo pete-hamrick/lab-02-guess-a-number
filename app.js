@@ -9,10 +9,8 @@ const userGuess = document.getElementById('user-guess');
 const feedback = document.getElementById('feedback');
 let guessesRemaining = 4;
 
-console.log(targetNumber);
 // set event listeners 
 guessBtn.addEventListener('click', ()=> {
-    console.log(targetNumber);
     const userGuessNum = Number(userGuess.value);
     guessesRemaining--;
     compareNumbers(reset, guessBtn, feedback, userGuessNum, targetNumber);
@@ -34,6 +32,3 @@ reset.addEventListener('click', ()=> {
     frog.textContent = `You have ${guessesRemaining} guesses left`;
 
 });
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
