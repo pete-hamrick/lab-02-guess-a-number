@@ -1,34 +1,53 @@
 // import functions and grab DOM elements
-import { compareNumbers } from './utils.js';
+import { compareNumbers, genRandNum } from './utils.js';
 const guessBtn = document.getElementById('guess-btn');
-const reset = document.getElementById('reset');
-const frog = document.getElementById('frog');
-// initialize state
-let targetNumber = Math.floor(Math.random() * 20) + 1;
+const resetBtn = document.getElementById('reset');
 const userGuess = document.getElementById('user-guess');
 const feedback = document.getElementById('feedback');
-let guessesRemaining = 4;
 
-// set event listeners 
-guessBtn.addEventListener('click', ()=> {
+let guessesRemaining = 4;
+let computerNum = genRandNum();
+
+//button clicks here
+guessBtn.addEventListener('click', startGame);
+resetBtn.addEventListener('click', resetGame);
+
+//start game function
+function startGame(){
+    //converting user string input to a number
     const userGuessNum = Number(userGuess.value);
-    guessesRemaining--;
-    compareNumbers(reset, guessBtn, feedback, userGuessNum, targetNumber);
-    if (guessesRemaining === 0 && userGuessNum !== targetNumber) {
-        feedback.textContent = 'You are out of guesses! Game over.';
-        guessBtn.disabled = true;
-        reset.style.visibility = 'visible'; 
+    if (userGuessNum > 20 || userGuessNum < 1){
+        feedback.innerText = ' You entered an invalid number';
     }
-    frog.textContent = `You have ${guessesRemaining} guesses left`;
-});
-  
-reset.addEventListener('click', ()=> {
+    else {
+        guessesRemaining--;
+        const result = compareNumbers(computerNum, userGuessNum);
+        if (guessesRemaining === 0 && userGuessNum !== computerNum){
+            feedback.innerText = `Guesses Left: ${guessesRemaining}, GAME OVER`;
+            gameOver();
+        }
+        else if (result === 'too high'){
+            feedback.innerText = `You guessed too high, you have ${guessesRemaining} guesses left.`;
+        }
+        else if (result === 'too low'){
+            feedback.innerText = `You guessed too low, you have ${guessesRemaining} guesses left.`;
+        }
+        else {
+            feedback.innerText = `You Won, you had ${guessesRemaining} guesses left.`;
+            gameOver();
+        }
+    }
+}
+
+function gameOver(){
+    guessBtn.disabled = true;
+    resetBtn.style.visibility = 'visible';
+}
+
+function resetGame(){
     guessBtn.disabled = false;
-    reset.style.visibility = 'hidden';
+    resetBtn.style.visibility = 'hidden';
     guessesRemaining = 4;
-    targetNumber = Math.floor(Math.random() * 20) + 1;
     feedback.textContent = '';
     userGuess.value = '';
-    frog.textContent = `You have ${guessesRemaining} guesses left`;
-
-});
+}

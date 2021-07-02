@@ -1,13 +1,24 @@
-export function compareNumbers(reset, guessBtn, results, targetNumber, userGuessNum){
-    if (targetNumber > userGuessNum) {
-        results.textContent = 'Your guess is too high';
+export function compareNumbers(targetNum, userNum){
 
-    } else if (targetNumber < userGuessNum) {
-        results.textContent = 'Your guess is too low';
+    let result = '';
 
-    } else {
-        results.textContent = 'You Win! Game Over!';
-        guessBtn.disabled = true;
-        reset.style.visibility = 'visibility';
+    if (targetNum > userNum){
+        result = 'too low';
     }
-}    
+    else if (targetNum < userNum){
+
+        result = 'too high';
+    }
+    else {
+        result = 'correct';
+    }
+
+    return result;
+
+}
+
+export function genRandNum(){
+
+    return Math.floor(Math.random() * 20) + 1;
+
+}
