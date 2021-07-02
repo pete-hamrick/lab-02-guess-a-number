@@ -17,6 +17,30 @@ export function compareNumbers(targetNum, userNum){
 
 }
 
+
+
+//functions COULD HAVE inputs/returns/ unofficaial returns
+
+
+export function genRandNum(){
+
+    return Math.floor(Math.random() * 20) + 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //user trying to guess number, checking if user guessed correct or high or low
 // compareNumbers, will compare user target number(int) against guess(int)
 

@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { compareNumbers } from '../utils.js';
+import { compareNumbers, genRandNum } from '../utils.js';
 const test = QUnit.test;
 
 test('userGuess is too high', (expect) => {
@@ -45,6 +45,41 @@ test('userGuess is correct', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('testing random number generator', (expect) => {
+    
+    const expected = true;
+    let actual = false;
+
+    let res = genRandNum();
+    console.log(res);
+    if (res > 0 && res < 21){
+
+        actual = true;
+
+    }
+    
+    expect.equal(actual, expected);
+});
+
+test('testing random number generator', (expect) => {
+    
+    const expected = true;
+    let actual = false;
+
+    let res = genRandNum();
+    console.log(res);
+
+    if (res > 0 && res < 21){
+
+        actual = true;
+
+    }
+    
+    expect.equal(actual, expected);
+});
+
+
 
 
 
