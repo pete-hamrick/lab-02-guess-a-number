@@ -3,8 +3,69 @@ import { compareNumbers } from './utils.js';
 const guessBtn = document.getElementById('guess-btn');
 const reset = document.getElementById('reset');
 const frog = document.getElementById('frog');
+const userGuess = document.getElementById('user-guess');
+const feedback = document.getElementById('feedback');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // initialize state
-let targetNumber = Math.floor(Math.random() * 20) + 1;
+/*let targetNumber = Math.floor(Math.random() * 20) + 1;
 const userGuess = document.getElementById('user-guess');
 const feedback = document.getElementById('feedback');
 let guessesRemaining = 4;
@@ -32,3 +93,4 @@ reset.addEventListener('click', ()=> {
     frog.textContent = `You have ${guessesRemaining} guesses left`;
 
 });
+*/

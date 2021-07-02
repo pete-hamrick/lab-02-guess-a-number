@@ -17,6 +17,19 @@ test('userGuess is too high', (expect) => {
     expect.equal(actual, expected);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 test('userGuess is too low', (expect) => {
     //Arrange
     // Set up your arguments and expectations
@@ -44,3 +57,4 @@ test('userGuess is right on', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+*/

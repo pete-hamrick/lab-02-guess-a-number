@@ -1,4 +1,32 @@
-export function compareNumbers(reset, guessBtn, results, targetNumber, userGuessNum){
+export 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*export function compareNumbers(reset, guessBtn, results, targetNumber, userGuessNum){
     if (targetNumber > userGuessNum) {
         results.textContent = 'Your guess is too high';
 
@@ -10,4 +38,4 @@ export function compareNumbers(reset, guessBtn, results, targetNumber, userGuess
         guessBtn.disabled = true;
         reset.style.visibility = 'visibility';
     }
-}    
+}   */ 
