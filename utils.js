@@ -17,75 +17,8 @@ export function compareNumbers(targetNum, userNum){
 
 }
 
-
-
-//functions COULD HAVE inputs/returns/ unofficaial returns
-
-
 export function genRandNum(){
 
     return Math.floor(Math.random() * 20) + 1;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//user trying to guess number, checking if user guessed correct or high or low
-// compareNumbers, will compare user target number(int) against guess(int)
-
-//if too high -> tell user guess too high
-//if too low -> tell user too low
-//if user guess equals target number -> user was correct
-
-//spits out somthing (return) -> string
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*export function compareNumbers(reset, guessBtn, results, targetNumber, userGuessNum){
-    if (targetNumber > userGuessNum) {
-        results.textContent = 'Your guess is too high';
-
-    } else if (targetNumber < userGuessNum) {
-        results.textContent = 'Your guess is too low';
-
-    } else {
-        results.textContent = 'You Win! Game Over!';
-        guessBtn.disabled = true;
-        reset.style.visibility = 'visibility';
-    }
-}   */ 
