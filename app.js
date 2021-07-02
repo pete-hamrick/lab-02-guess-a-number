@@ -6,10 +6,31 @@ const frog = document.getElementById('frog');
 const userGuess = document.getElementById('user-guess');
 const feedback = document.getElementById('feedback');
 
+let guessesRemaining = 4;
+
+
+guessBtn.addEventListener('click', startGame);
 
 
 
 
+function startGame(){
+
+    //converting user string input to a number
+const userGuessNum = Number(userGuess.value);
+
+guessesRemaining--;
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
